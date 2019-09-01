@@ -40,4 +40,17 @@ public class CalculadoraTest {
         Assert.assertEquals(esperado,resultado);
     }
 
+    @Test
+    public void testDivision(){
+        //Arrange
+        int a = 4;
+        int b = 2;
+        int esperado = 2;
+        Calculadora calc = new Calculadora();
+        //Act
+        int resultado = calc.dividir(a,b);
+        //Assert
+        Assert.assertEquals(esperado,resultado);
+    }
+
 }

@@ -15,5 +15,17 @@ int resultado = calc.sumar(a,b);
     //Assert
     Assert.assertEquals(esperado,resultado);
 }
+    @Test
+    public void testResta(){
+        //Arrange
+        int a = 4;
+        int b = 2;
+        int esperado = 2;
+        Calculadora calc = new Calculadora();
+        //Act
+        int resultado = calc.restar(a,b);
+        //Assert
+        Assert.assertEquals(esperado,resultado);
+    }
 
 }

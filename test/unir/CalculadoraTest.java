@@ -1,6 +1,7 @@
 package unir;
 import org.junit.Assert;
 import org.junit.Test;
+
 public class CalculadoraTest {
 
     @Test
@@ -51,6 +52,27 @@ public class CalculadoraTest {
         int resultado = calc.dividir(a,b);
         //Assert
         Assert.assertEquals(esperado,resultado);
+    }
+
+    @Test
+    public void testRaizCuadrada(){
+        //Arrange
+        boolean correcto=false;
+        int a = 120;
+        float esperado = 10.9544511F;
+        Calculadora calc = new Calculadora();
+        //Act
+        float resultado = calc.sqrt(a);
+        //Assert
+        float diff=resultado-esperado;
+        if(diff<0){
+            diff *= -1;
+        }
+        if(diff<=0.0001F){
+            correcto=true;
+        }
+        Assert.assertTrue(correcto);
+
     }
 
 }

@@ -27,5 +27,17 @@ public class CalculadoraTest {
         //Assert
         Assert.assertEquals(esperado,resultado);
     }
+    @Test
+    public void testMultiplicacion(){
+        //Arrange
+        int a = 4;
+        int b = 2;
+        int esperado = 8;
+        Calculadora calc = new Calculadora();
+        //Act
+        int resultado = calc.multiplicar(a,b);
+        //Assert
+        Assert.assertEquals(esperado,resultado);
+    }
 
 }
